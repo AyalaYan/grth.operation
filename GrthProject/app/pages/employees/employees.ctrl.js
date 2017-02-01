@@ -131,6 +131,8 @@
                     else {
                         toaster.error('Insert Employee', data.Message);
                     }
+                    vm.ResetEmployeeView();
+                   
                 }, function (error) { });
             }
             else {
@@ -141,21 +143,13 @@
                     else {
                         toaster.error('Update Employee', data.Message);
                     }
+                     vm.ResetEmployeeView();
                 }, function (error) { });
-            }
-
-            vm.addEditClick = false;
-            vm.collapsed = false;
-            vm.employeeObj = { ID: 0, IsActive: true }
-            vm.setDefaultExperience();
-            vm.getEmployeeTableData();
-
+            }        
         }
-
         vm.addExperienceRecord = function () {
             vm.experiencesList.push({ ID: 0, IsActive: true });
         }
-
 
         /*****************************************************
     *               METHODS - PRIVATE                   *
@@ -219,6 +213,16 @@
             vm.experiencesList.push({ ID: 0, IsActive: true });
         }
 
+        vm.ResetEmployeeView = function(){      
+          vm.addEditClick = false;
+            vm.collapsed = false;
+           
+            vm.setDefaultExperience();
+            vm.getEmployeeTableData();
+             vm.employeeObj = { ID: 0, IsActive: true }
+            vm.action = "Add";
+            vm.whenHttpRequestHasFinishedLoading = null;
+        }
         function init() {
             vm.getEmployeeTableData();
             vm.getCountriesOptions();

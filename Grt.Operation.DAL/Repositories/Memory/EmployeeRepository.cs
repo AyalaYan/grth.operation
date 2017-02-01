@@ -27,6 +27,7 @@ namespace CMP.Operation.DAL.Repositories.Memory
                             LastName = tbl.LastName,
                             FullName = tbl.FirstName + " " + tbl.LastName,
                             FirstFamilyName = tbl.FirstFamilyName,
+                            StartDate=tbl.StartDate,
                             Address = tbl.Address,
                             PhoneNumber = tbl.PhoneNumber,
                             Email = tbl.Email,

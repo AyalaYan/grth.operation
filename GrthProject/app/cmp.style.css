@@ -73,10 +73,14 @@
       padding-top: 10px;
       padding-bottom: 10px; } }
   body .navbar-inverse, body .navbar-header, body .navbar-collapsed {
-    background-color: #fff !important;
     background: #fff !important;
-    border-color: #fff !important;
-    padding: 5px !important; }
+    padding: 5px !important;
+    position: relative;
+    margin-bottom: 0px;
+    padding-bottom: 0px !important;
+    border-color: #fff !important; }
+  body .navbar-inverse {
+    box-shadow: 0 0 10px #52b5e0; }
   body .navbar-nav {
     margin-top: 10px;
     margin-left: 20px; }

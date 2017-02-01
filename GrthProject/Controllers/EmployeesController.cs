@@ -102,6 +102,7 @@ namespace CMPhProject.Controllers
                 EmployeeUpdated.FirstName = EmployeeVM.FirstName;
                 EmployeeUpdated.LastName = EmployeeVM.LastName;
                 EmployeeUpdated.FirstFamilyName = EmployeeVM.FirstFamilyName;
+                EmployeeUpdated.StartDate = EmployeeVM.StartDate;
                 EmployeeUpdated.Address = EmployeeVM.Address;
                 EmployeeUpdated.PhoneNumber = EmployeeVM.PhoneNumber;
                 EmployeeUpdated.Remarks = EmployeeVM.Remarks;

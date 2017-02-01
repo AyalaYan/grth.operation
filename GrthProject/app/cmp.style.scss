@@ -126,10 +126,16 @@ body {
     }
 
     .navbar-inverse, .navbar-header, .navbar-collapsed {
-        background-color: $color-white !important;
         background: $color-white !important;
-        border-color: $color-white !important;
         padding: 5px !important;
+        position: relative;
+        margin-bottom: 0px;
+        padding-bottom: 0px !important;
+        border-color: $color-white !important;
+    }
+
+    .navbar-inverse {
+        box-shadow: 0 0 10px $color-1;
     }
 
     .navbar-nav {

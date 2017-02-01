@@ -26,6 +26,8 @@ namespace CMP.Operation.DAL.Models
         public int? CityID { get; set; }
         public bool IsActive { get; set; } = true;
         public string Remarks { get; set; }
+        [Required]
+        public DateTime StartDate { get; set; }
         #endregion
 
         #region relationships

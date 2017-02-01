@@ -60,6 +60,10 @@
     <Compile Include="Migrations\201701221304291_cmpDB.Designer.cs">
       <DependentUpon>201701221304291_cmpDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201702010733178_Employ.cs" />
+    <Compile Include="Migrations\201702010733178_Employ.Designer.cs">
+      <DependentUpon>201702010733178_Employ.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\City.cs" />
     <Compile Include="Models\Company.cs" />
@@ -144,6 +148,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201701221304291_cmpDB.resx">
       <DependentUpon>201701221304291_cmpDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702010733178_Employ.resx">
+      <DependentUpon>201702010733178_Employ.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

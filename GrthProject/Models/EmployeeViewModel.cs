@@ -36,6 +36,7 @@ namespace CMP.Operation.Models
         public bool IsActive { get; set; }
         public string Remarks { get; set; }
         public bool IsAllowDelete { get; set; }
+        public DateTime StartDate { get; set; }
 
     }
 }

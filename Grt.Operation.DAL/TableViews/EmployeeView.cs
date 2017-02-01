@@ -23,8 +23,9 @@ namespace CMP.Operation.DAL.TableViews
         public string CountryName { get; set; }
         public string StateName { get; set; }
         public string CityName { get; set; }
-        public bool IsActive { get; set; } 
+        public bool IsActive { get; set; }
         public string Remarks { get; set; }
         public bool IsAllowDelete { get; set; }
+        public DateTime StartDate { get; set; }
     }
 }

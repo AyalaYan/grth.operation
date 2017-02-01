@@ -1,8 +1,7 @@
 ﻿@import "../../common/cmp.vars.scss";
 
 .employees-section {
-    margin-top: 70px !important;
-     /*display: inline-block!important;*/
+
 
     .inline {
         display: inline-block;
@@ -130,6 +129,7 @@
     .employees-table-header {
         background-color: $color-white;
         box-shadow: 0 0 10px #ccc;
+        padding-top: 10px;
     }
 
     .employees-header {

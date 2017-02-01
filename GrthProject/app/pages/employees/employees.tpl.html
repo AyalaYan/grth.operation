@@ -1,11 +1,10 @@
 ﻿<div class="employees-section" id="employeesSectionID">
-    <div ng-show="::employeesVm.addEditClick">
+    <div ng-show="employeesVm.addEditClick">
         <div class="cmp-employee-header">
             &nbsp;&nbsp;<i class="glyphicon glyphicon glyphicon-menu-right cmp-glyphicon pull-left collpased-icon" ng-show="!employeesVm.collapsed" ng-click="employeesVm.collapsed=!employeesVm.collapsed;" title="Open"></i>
             &nbsp;&nbsp;<i class="glyphicon glyphicon glyphicon-menu-down cmp-glyphicon pull-left collpased-icon" ng-show="employeesVm.collapsed" ng-click="employeesVm.collapsed=!employeesVm.collapsed;" title="Close"></i>
             <i class="glyphicon glyphicon-pencil cmp-glyphicon-edit"></i>&nbsp;&nbsp;
             <h3 class="employee-title">{{employeesVm.action}} Employee {{::employeesVm.employeeObj.FullName}}</h3>
-
         </div>
         <div class="container-employees-data" ng-show="employeesVm.collapsed">
             <form class="cmp-employee-body">
@@ -74,8 +73,6 @@
                     </div>
                 </div>
                 <div class="user-header row">
-
-
                     <div class="col-md-1 div-metadata-wrapper-base">
                         <span class="required-sign"></span>Country:
                     </div>
