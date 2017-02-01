@@ -1,0 +1,159 @@
+﻿@import "common/cmp.vars.scss";
+
+body {
+    background-color: $color-base !important;
+
+
+
+    @media (min-width: 1200px) {
+        .div-metadata-wrapper, .div-metadata-wrapper-base {
+            text-align: end;
+        }
+    }
+
+    .navbar-operation {
+        background-color: $color-white;
+        color: $color-1;
+        margin-top: 0%;
+        padding-top: 0.1%;
+        padding-left: 1%;
+        /*display: inline-block !important;*/
+    }
+
+    .padding-0 {
+        padding: 0px !important;
+    }
+
+    textarea, h1, h2, h3, h4, h5, div, ruby-span, label, a {
+        font-family: $font-family !important;
+        color: $color-1 !important;
+    }
+
+    input {
+        font-family: $font-family !important;
+        color: $color-2 !important;
+    }
+
+    .cursor-pointer {
+        cursor: pointer !important;
+    }
+
+    .display-inline {
+        display: inline-block !important;
+    }
+
+    .font-bold {
+        font-weight: bold;
+    }
+
+
+
+    .user-header {
+        color: $color-2 !important;
+    }
+
+    .div-user-wrapper {
+        margin-left: 15px;
+    }
+
+    .form-control {
+        height: 30px;
+        margin-top: 1px !important;
+        margin-bottom: 1px !important;
+    }
+
+    .required-sign {
+        margin-left: -13px;
+        display: inline-block !important;
+        color: $color-1 !important;
+    }
+
+    .div-metadata-wrapper div, .div-metadata-wrapper-base div {
+        color: $color-2 !important;
+    }
+
+    .inactive-status-radio {
+        margin-left: 15px !important;
+    }
+
+    .cmp-glyphicon-edit {
+        color: $color-2 !important;
+        font-size: large;
+    }
+
+    @media (max-width: 990px) {
+        .navbar-header {
+            float: none;
+        }
+
+        .navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+            background-color: $color-3;
+            border-color: $color-white;
+        }
+
+        .navbar-inverse .navbar-toggle {
+            background-color: $color-3;
+            border-color: $color-white;
+            cursor: pointer;
+        }
+
+        .navbar-toggle {
+            display: block;
+        }
+
+        .navbar-collapse {
+            border-top: 1px solid transparent;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+        }
+
+        .navbar-collapse.collapse {
+            display: none !important;
+        }
+
+        .navbar-nav {
+            float: none !important;
+            margin: 7.5px -15px;
+        }
+
+        .navbar-nav > li {
+            float: none;
+        }
+
+        .navbar-nav > li > a {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
+
+    .navbar-inverse, .navbar-header, .navbar-collapsed {
+        background-color: $color-white !important;
+        background: $color-white !important;
+        border-color: $color-white !important;
+        padding: 5px !important;
+    }
+
+    .navbar-nav {
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+
+    .navbar-nav > li {
+        font-size: large;
+        color: $color-2 !important;
+    }
+
+    .navbar-nav > .active > a {
+        background-color: $color-white !important;
+        font-weight: bold;
+        color: #000000 !important;
+    }
+
+    .img-logo {
+        width: 90px;
+        height: 60px;
+    }
+    /*.ng-view-style {
+        overflow-y: auto!important;
+        max-height: 800px!important;
+    }*/
+}

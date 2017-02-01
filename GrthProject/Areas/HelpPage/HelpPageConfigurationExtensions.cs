@@ -11,10 +11,10 @@ using System.Net.Http.Headers;
 using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Description;
-using GrthProject.Areas.HelpPage.ModelDescriptions;
-using GrthProject.Areas.HelpPage.Models;
+using CMPhProject.Areas.HelpPage.ModelDescriptions;
+using CMPhProject.Areas.HelpPage.Models;
 
-namespace GrthProject.Areas.HelpPage
+namespace CMPhProject.Areas.HelpPage
 {
     public static class HelpPageConfigurationExtensions
     {

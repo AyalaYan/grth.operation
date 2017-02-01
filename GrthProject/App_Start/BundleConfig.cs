@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace GrthProject
+namespace CMPhProject
 {
     public class BundleConfig
     {

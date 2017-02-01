@@ -1,0 +1,43 @@
+﻿
+@import "../common/ctr.vars.scss";
+
+.set-section {
+    position: fixed;
+    margin-top: 5px;
+    left: 35%;
+    align-items: flex-end;
+
+    .panel {
+        width: 420px;
+    }
+
+    .panel-operation {
+        text-align: left !important;
+        padding-left: 50px !important;
+    }
+
+    .employee-header {
+        color: $color-2 !important;
+    }
+
+    .div-employee-wrapper {
+        margin-left: 15px;
+    }
+
+    .form-control {
+        margin-top: 2px !important;
+        margin-bottom: 2px !important;
+    }
+
+    .required-sign {
+        margin-left: -13px;
+        display: inline-block !important;
+        color: $color-1 !important;
+    }
+
+    .img-load-avatar {
+        width: 55px;
+        height: 55px;
+        cursor: pointer;
+    }
+}

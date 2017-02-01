@@ -1,6 +1,6 @@
 using System;
 
-namespace GrthProject.Areas.HelpPage.ModelDescriptions
+namespace CMPhProject.Areas.HelpPage.ModelDescriptions
 {
     /// <summary>
     /// Describes a type model.

@@ -1,0 +1,23 @@
+﻿<div class="login-section">
+    <div class="container login-container">
+        <form class="row">
+            <div class="row">
+                <h4 class="col-md-3">User Name:</h4>
+                <div class="col-md-9">
+                    <input class="form-control" ng-model="loginVm.username" required />
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <h4 class="col-md-3">Password:</h4>
+                <div class="col-md-9">
+                    <input class="form-control" type="password" ng-model="loginVm.password" required />
+                </div>
+            </div>
+            <br />
+            <button ng-click="loginVm.login()" type="submit" class="btn btn-default button-login">login</button>
+            <br />
+            <span>{{loginVm.error}}</span>
+        </form>
+    </div>
+</div>

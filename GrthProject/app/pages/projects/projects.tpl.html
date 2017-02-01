@@ -1,0 +1,9 @@
+﻿<div class="employeees-section">
+    <div class="panel panel-default">
+        <div class="panel-heading">operation:</div>
+        <div class="panel-body panel-operation">
+            <employee-data ng-repeat="employee in cmpListVm.listoperation track by $index" employee="employee"></employee-data>
+        </div>
+        <div class="panel-footer"><input value="Add" type="button" class="btn" ng-click="cmpListVm.addNewemployee();"/> </div>
+    </div>
+</div>

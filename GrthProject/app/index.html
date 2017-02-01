@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html ng-app="cmpApp">
+<head>
+    <title>{{title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="cmp.style.min.css" rel="stylesheet" />
+    <link href="pages/login/login.style.min.css" rel="stylesheet" />
+    <link href="../Content/cmp.site.css" rel="stylesheet" />
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Content/angular-material.css" rel="stylesheet" />
+    <link href="../bower_components/angular-ui-grid/ui-grid.css" rel="stylesheet" />
+    <link href="pages/employees/employees.style.min.css" rel="stylesheet" />
+    <link href="../bower_components/angular-multiple-select/build/multiple-select.css" rel="stylesheet" />
+    <link href="../bower_components/AngularJS-Toaster/toaster.min.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-header">
+            <img src="assets/images/cmp_logo.jpg" class="img-logo" />
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li ng-class="{active: view=='login'}" ng-click="view='login';"><a ng-href="./index.html#!login">Login</a></li>
+                <li ng-class="{active: view=='employees'}" ng-click="view='employees';"><a ng-href="./index.html#!employees">Employees</a></li>
+                <li ng-class="{active: view=='projects'}" ng-click="view='projects';"><a ng-href="./index.html#!projects">Projects</a></li>
+                <li ng-class="{active: view=='customers'}" ng-click="view='customers';"><a ng-href="./index.html#!customers">Customers</a></li>
+                <li ng-class="{active: view=='settings'}" ng-click="view='settings';"><a ng-href="./index.html#!settings">Settings</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="body-content text-center">
+        <div ng-view class="ng-view-style" autoscroll="true"></div>
+    </div>
+    <!-- scripts -->
+    <script src="../Scripts/jquery-1.9.1.min.js"></script>
+    <script src="../Scripts/lodash.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+    <!-- angular scripts -->
+    <script src="../Scripts/angular.min.js"></script>
+    <script src="../Scripts/angular-route.min.js"></script>
+    <script src="../Scripts/angular-touch.min.js"></script>
+    <script src="../Scripts/angular-loader.min.js"></script>
+    <script src="../Scripts/angular-material/angular-material.js"></script>
+    <script src="../Scripts/angular-aria.min.js"></script>
+    <script src="../Scripts/angular-mocks.js"></script>
+    <!-- bower - angular scripts -->
+    <script src="../bower_components/angular-ui-grid/ui-grid.js"></script>
+    <script src="../bower_components/angular-ui-grid/csv.js"></script>
+    <script src="../bower_components/pdfmake/build/pdfmake.min.js"></script>
+    <script src="../bower_components/pdfmake/build/vfs_fonts.js"></script>
+    <script src="../bower_components/angular-multiple-select/build/multiple-select.js"></script>
+    <script src="../bower_components/AngularJS-Toaster/toaster.min.js"></script>
+    <script src="../bower_components/angular-animate/angular-animate.min.js"></script>
+    <!-- app scripts -->
+    <script src="app.mdl.js"></script>
+    <script src="app.route.js"></script>
+    <script src="pages/login/login.ctrl.js"></script>
+    <script src="pages/employees/employees.ctrl.js"></script>
+    <script src="pages/customers/customers.ctrl.js"></script>
+    <script src="pages/projects/projects.ctrl.js"></script>
+    <script src="pages/settings/settings.ctrl.js"></script>
+    <!-- Services -->
+    <script src="common/services/cmp.api.srv.js"></script>
+    <script src="common/services/cmp.data.srv.js"></script>
+    <script src="common/services/cmp-admin.srv.js"></script>
+    <!-- Directions -->
+    <script src="common/directives/experience/cmp.experience.dirct.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+﻿<div class="employees-section" id="employeesSectionID">
+    <div ng-show="::employeesVm.addEditClick">
+        <div class="cmp-employee-header">
+            &nbsp;&nbsp;<i class="glyphicon glyphicon glyphicon-menu-right cmp-glyphicon pull-left collpased-icon" ng-show="!employeesVm.collapsed" ng-click="employeesVm.collapsed=!employeesVm.collapsed;" title="Open"></i>
+            &nbsp;&nbsp;<i class="glyphicon glyphicon glyphicon-menu-down cmp-glyphicon pull-left collpased-icon" ng-show="employeesVm.collapsed" ng-click="employeesVm.collapsed=!employeesVm.collapsed;" title="Close"></i>
+            <i class="glyphicon glyphicon-pencil cmp-glyphicon-edit"></i>&nbsp;&nbsp;
+            <h3 class="employee-title">{{employeesVm.action}} Employee {{::employeesVm.employeeObj.FullName}}</h3>
+
+        </div>
+        <div class="container-employees-data" ng-show="employeesVm.collapsed">
+            <form class="cmp-employee-body">
+                <h4 class="inform-data-empolyee display-inline">Personal Information</h4>
+                <div class="pull-right display-inline">
+                    <i class="glyphicon glyphicon-floppy-disk cmp-glyphicon"
+                       ng-show="employeesVm.collapsed" ng-click="employeesVm.saveEmployee();" title="Save"></i>&nbsp;&nbsp;
+                    <i class="glyphicon glyphicon-share-alt cmp-glyphicon"
+                       ng-show="employeesVm.collapsed" ng-click="employeesVm.addEditClick=false;"
+                       title="Cancel"></i>&nbsp;&nbsp;
+                </div>
+                <div class="user-header row">
+                    <div class="col-md-1 div-metadata-wrapper-base">
+                        <span class="required-sign">*&nbsp;</span>First Name:
+                    </div>
+                    <div class="col-md-2">
+                        <input type="text" class="form-control display-inline" ng-model="employeesVm.employeeObj.FirstName" required placeholder="Enter first name..." />
+                    </div>
+                    <div class="col-md-1 div-metadata-wrapper-base">
+                        <span class="required-sign">*&nbsp;</span>Last Name:
+                    </div>
+                    <div class="col-md-2">
+                        <input type="text" class="form-control display-inline" ng-model="employeesVm.employeeObj.LastName" required placeholder="Enter last name..." />
+                    </div>
+                    <div class="col-md-1 div-metadata-wrapper-base">
+                        <span class="required-sign">*&nbsp;</span>First Family:
+                    </div>
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" ng-model="employeesVm.employeeObj.FirstFamilyName" placeholder="Enter first family name..." />
+                    </div>
+                    <div class="col-md-1 div-metadata-wrapper-base">
+                        <span class="required-sign"></span>Address:
+                    </div>
+                    <div class="col-md-2">
+                        <input type="text" class="form-control display-inline" ng-model="employeesVm.employeeObj.Address" placeholder="Enter address..." />
+                    </div>
+                </div>
+                <div class="user-header row">
+
+                    <div class="col-md-1 div-metadata-wrapper-base">
+                        <span class="required-sign">*&nbsp;</span>Phone:
+                    </div>
+                    <div class="col-md-2">
+                        <input type="text" class="form-control display-inline" ng-model="employeesVm.employeeObj.PhoneNumber" required placeholder="xxx-xxxxxxx" />
+                    </div>
+                    <div class="col-md-1 div-metadata-wrapper-base">
+                        <span class="required-sign">*&nbsp;</span>Email:
+                    </div>
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" ng-model="employeesVm.employeeObj.Email" placeholder="someone@example.com" />
+                    </div>
+                    <div class="col-md-1 div-metadata-wrapper-base">
+                        <span class="required-sign"></span>Job Title:
+                    </div>
+                    <div class="col-md-2">
+                        <select class="form-control" ng-model="employeesVm.employeeObj.JobID"
+                                ng-options="job.Value as job.DisplayText for job in employeesVm.listJobs">
+                            <option value="" disabled="" selected="">Select Job</option>
+                        </select>
+                    </div>
+                    <div class="col-md-1 div-metadata-wrapper-base">
+                        <span class="required-sign">*&nbsp;</span>Start Date:
+                    </div>
+                    <div class="col-md-2">
+                        <input type="date" class="form-control display-inline" ng-model="employeesVm.employeeObj.StartDate" required placeholder="dd/mm/yyyy" />
+                    </div>
+                </div>
+                <div class="user-header row">
+
+
+                    <div class="col-md-1 div-metadata-wrapper-base">
+                        <span class="required-sign"></span>Country:
+                    </div>
+                    <div class="col-md-2">
+                        <select class="form-control" ng-model="employeesVm.employeeObj.CountryID " ng-change="employeesVm.changeCountry();"
+                                ng-options="country.Value as country.DisplayText for country in employeesVm.countriesOptions">
+                            <option value="" disabled="" selected="">Select country</option>
+                        </select>
+                    </div>
+                    <div class="col-md-1 div-metadata-wrapper-base">
+                        <span class="required-sign">*&nbsp;</span>State:
+                    </div>
+                    <div class="col-md-2">
+                        <select class="form-control" ng-model="employeesVm.employeeObj.StateID " ng-change="employeesVm.changeState();"
+                                ng-options="state.Value as state.DisplayText for state in employeesVm.statesOptions">
+                            <option value="" disabled="" selected="">Select State</option>
+                        </select>
+                    </div>
+                    <div class="col-md-1 div-metadata-wrapper-base">
+                        <span class="required-sign">*&nbsp;</span>City:
+                    </div>
+                    <div class="col-md-2">
+                        <select class="form-control" ng-model="employeesVm.employeeObj.CityID " ng-change="employeesVm.changecity();"
+                                ng-options="city.Value as city.DisplayText for city in employeesVm.citiesOptions">
+                            <option value="" disabled="" selected="">Select city</option>
+                        </select>
+                    </div>
+                    <div class="col-md-1 div-metadata-wrapper-base">
+                        <span class="required-sign">*&nbsp;</span>Status:
+                    </div>
+                    <div class="col-md-2">
+                        <div>
+                            <label class="radio inline">
+                                <input type="radio" name="sex" ng-value="true"
+                                       ng-model="employeesVm.employeeObj.IsActive">
+                                <span> Active </span>
+                            </label>
+                            <label class="radio inline">
+                                <input type="radio" name="sex" ng-model="employeesVm.employeeObj.IsActive"
+                                       ng-value="false">
+                                <span> Inactive </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="user-header row">
+                    <div class="col-md-2 div-metadata-wrapper">
+                        <span class="required-sign">*&nbsp;</span>Remarks:
+                    </div>
+                    <div class="col-md-5">
+                        <input type="text" class="form-control" ng-model="employeesVm.employeeObj.Remarks" placeholder="Enter remarks..." />
+                    </div>
+                </div>
+            </form>
+            <form class="cmp-employee-body">
+                <h4 class="inform-data-empolyee display-inline">Business Information</h4>
+                <i class="glyphicon glyphicon-plus-sign cmp-glyphicon-plus pull-right display-inline" title="Add" ng-click="employeesVm.addExperienceRecord();"></i>
+                <employee-experience ng-repeat="experience in employeesVm.experiencesList"
+                                     technologies="employeesVm.technologies" experience="experience"
+                                     companies="employeesVm.listCompanies"></employee-experience>
+            </form>
+        </div>
+    </div>
+    <div class="employees-table-header">
+        <h3 class="employees-header display-inline">Employees:</h3>
+        <i class="glyphicon glyphicon-plus-sign cmp-glyphicon-plus pull-right display-inline" title="Add" ng-click="employeesVm.addEmployee();"></i>
+        <div ui-grid="::employeesVm.gridOptions"
+             ui-grid-pagination ui-grid-cellNav ui-grid-edit ui-grid-resize-columns ui-grid-pinning
+             ui-grid-selection ui-grid-move-columns ui-grid-importer ui-grid-exporter></div>
+    </div>
+</div>

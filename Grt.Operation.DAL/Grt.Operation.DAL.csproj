@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{14A53BE8-0DD9-4AF3-8A27-82E5F43404C6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Grt.Operation.DAL</RootNamespace>
+    <AssemblyName>Grt.Operation.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Functions\Errors.cs" />
+    <Compile Include="Functions\Extensions\EnumExtentions.cs" />
+    <Compile Include="Functions\Extensions\ExpressionExtentions.cs" />
+    <Compile Include="Functions\Extensions\IQueryableExtensions.cs" />
+    <Compile Include="Functions\Extensions\StringExtensions.cs" />
+    <Compile Include="Functions\OutputDebug.cs" />
+    <Compile Include="GrtContext.cs" />
+    <Compile Include="Migrations\201701221304291_cmpDB.cs" />
+    <Compile Include="Migrations\201701221304291_cmpDB.Designer.cs">
+      <DependentUpon>201701221304291_cmpDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\City.cs" />
+    <Compile Include="Models\Company.cs" />
+    <Compile Include="Models\Country.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Department.cs" />
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Experience.cs" />
+    <Compile Include="Models\ExperianceTechnology.cs" />
+    <Compile Include="Models\FocalPoint.cs" />
+    <Compile Include="Models\Job.cs" />
+    <Compile Include="Models\Project.cs" />
+    <Compile Include="Models\ProjectTechnology.cs" />
+    <Compile Include="Models\ProjectType.cs" />
+    <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\State.cs" />
+    <Compile Include="Models\Technology.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\IRoleRepository.cs" />
+    <Compile Include="Repositories\ICityRepository.cs" />
+    <Compile Include="Repositories\ICompanyRepository.cs" />
+    <Compile Include="Repositories\ICountryRepository.cs" />
+    <Compile Include="Repositories\ICustomerRepository.cs" />
+    <Compile Include="Repositories\IDepartmentRepository.cs" />
+    <Compile Include="Repositories\IEmployeeRepository.cs" />
+    <Compile Include="Repositories\IExperienceRepository.cs" />
+    <Compile Include="Repositories\IExperienceTechnologyRepository.cs" />
+    <Compile Include="Repositories\IFocalPointRepository.cs" />
+    <Compile Include="Repositories\IGenericRepository.cs" />
+    <Compile Include="Repositories\IJobRepository.cs" />
+    <Compile Include="Repositories\IProjectRepository.cs" />
+    <Compile Include="Repositories\IProjectTechnologyRepository.cs" />
+    <Compile Include="Repositories\IProjectTypeRepository.cs" />
+    <Compile Include="Repositories\IStateRepository.cs" />
+    <Compile Include="Repositories\ITechnologyRepository.cs" />
+    <Compile Include="Repositories\IUserRepository.cs" />
+    <Compile Include="Repositories\Memory\RoleRepository.cs" />
+    <Compile Include="Repositories\Memory\CityRepository.cs" />
+    <Compile Include="Repositories\Memory\CompanyRepository.cs" />
+    <Compile Include="Repositories\Memory\CountryRepository.cs" />
+    <Compile Include="Repositories\Memory\CustomerRepository.cs" />
+    <Compile Include="Repositories\Memory\DepartmentRepository.cs" />
+    <Compile Include="Repositories\Memory\EmployeeRepository.cs" />
+    <Compile Include="Repositories\Memory\ExperienceRepository.cs" />
+    <Compile Include="Repositories\Memory\ExperienceTechnologyRepository.cs" />
+    <Compile Include="Repositories\Memory\FocalPointRepository.cs" />
+    <Compile Include="Repositories\Memory\GenericRepository.cs" />
+    <Compile Include="Repositories\Memory\JobRepository.cs" />
+    <Compile Include="Repositories\Memory\ProjectRepository.cs" />
+    <Compile Include="Repositories\Memory\ProjectTechnologyRepository.cs" />
+    <Compile Include="Repositories\Memory\ProjectTypeRepository.cs" />
+    <Compile Include="Repositories\Memory\StateRepository.cs" />
+    <Compile Include="Repositories\Memory\TechnologyRepository.cs" />
+    <Compile Include="Repositories\Memory\UserRepository.cs" />
+    <Compile Include="TableViews\RoleView.cs" />
+    <Compile Include="TableViews\CityView.cs" />
+    <Compile Include="TableViews\CompanyView.cs" />
+    <Compile Include="TableViews\CountryView.cs" />
+    <Compile Include="TableViews\CustomerView.cs" />
+    <Compile Include="TableViews\DepartmentView.cs" />
+    <Compile Include="TableViews\ExperianceView.cs" />
+    <Compile Include="TableViews\EmployeeView.cs" />
+    <Compile Include="TableViews\ExperianceTechnologyView.cs" />
+    <Compile Include="TableViews\FocalPointView.cs" />
+    <Compile Include="TableViews\JobView.cs" />
+    <Compile Include="TableViews\Options.cs" />
+    <Compile Include="TableViews\OrderView.cs" />
+    <Compile Include="TableViews\ProjectTechnologyView.cs" />
+    <Compile Include="TableViews\ProjectTypeView.cs" />
+    <Compile Include="TableViews\ProjectView.cs" />
+    <Compile Include="TableViews\StateView.cs" />
+    <Compile Include="TableViews\TechnologyView.cs" />
+    <Compile Include="TableViews\UserView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201701221304291_cmpDB.resx">
+      <DependentUpon>201701221304291_cmpDB.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

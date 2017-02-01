@@ -1,0 +1,190 @@
+﻿@import "../../common/cmp.vars.scss";
+
+.employees-section {
+    margin-top: 70px !important;
+     /*display: inline-block!important;*/
+
+    .inline {
+        display: inline-block;
+    }
+
+    .inline + .inline {
+        margin-left: 10px;
+    }
+
+    .radio {
+        color: $color-2 !important;
+        font-size: 15px;
+        position: relative;
+    }
+
+    .radio span {
+        position: relative;
+        padding-left: 20px;
+    }
+
+    .radio span:after {
+        content: '';
+        width: 15px;
+        height: 15px;
+        border: 3px solid;
+        position: absolute;
+        left: 0;
+        top: 1px;
+        border-radius: 100%;
+        -ms-border-radius: 100%;
+        -moz-border-radius: 100%;
+        -webkit-border-radius: 100%;
+        box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+
+    .radio input[type="radio"] {
+        cursor: pointer;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    }
+
+    .radio input[type="radio"]:checked + span {
+        color: $color-1;
+    }
+
+    .radio input[type="radio"]:checked + span:before {
+        content: '';
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        background: $color-1;
+        left: 5px;
+        top: 6px;
+        border-radius: 100%;
+        -ms-border-radius: 100%;
+        -moz-border-radius: 100%;
+        -webkit-border-radius: 100%;
+    }
+
+    .inform-data-empolyee {
+        color: $color-2 !important;
+        border-bottom: 1px solid $color-2 !important;
+        padding-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .div-metadata-wrapper {
+        line-height: 34px;
+        font-size: medium;
+    }
+
+    .div-metadata-wrapper-base {
+        line-height: 34px;
+        font-size: medium;
+        border-right: 2px solid #ccc;
+    }
+
+    .cmp-glyphicon {
+        line-height: 35px;
+        color: $color-2 !important;
+        font-size: large;
+        cursor: pointer;
+    }
+
+    .cmp-exp-glyphicon {
+        color: $color-2 !important;
+        font-size: large;
+        cursor: pointer;
+    }
+
+    .cmp-employee-header {
+        /*text-align: center;*/
+        padding: 20px 10px 10px 0px;
+        background-color: #fcfcfc;
+        box-shadow: 0 0 10px #ccc;
+    }
+
+    .cmp-employee-header h3, span {
+        color: $color-2 !important;
+        margin: 0px;
+    }
+
+    .employee-title {
+        display: inline-block;
+    }
+
+    .cmp-employee-body {
+        text-align: left !important;
+        padding-left: 30px !important;
+        padding-right: 20px !important;
+    }
+
+    .container-employees-data {
+        padding: 10px 10px 20px 10px !important;
+    }
+
+    .employees-table-header {
+        background-color: $color-white;
+        box-shadow: 0 0 10px #ccc;
+    }
+
+    .employees-header {
+        color: $color-2 !important;
+        border-bottom: 1px solid $color-2 !important;
+        padding-bottom: 5px;
+        padding-top: 0px;
+        font-weight: bold;
+        line-height: 40px;
+        margin: 0px;
+    }
+
+    .collpased-icon {
+        margin-left: 10px;
+    }
+
+    .cmp-glyphicon-plus {
+        line-height: 40px;
+        color: $color-2 !important;
+        font-size: large;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+
+    .ui-grid-cell-contents {
+        font-size: large !important;
+    }
+
+    .employee-experience {
+        box-shadow: 0 0 10px #ccc;
+        padding: 15px 0px 0px 15px;
+        border-bottom: 1px solid $color-white;
+        background-color: #fefefe;
+        margin-top: 5px;
+    }
+
+    .employee-experience-header {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .employee-experience-first-header {
+        margin-right: 0px;
+        padding-bottom: 0px;
+        border-bottom: 1px solid $color-2;
+    }
+
+    .experience-company-header {
+        line-height: 10px;
+        display: inline-block;
+        margin-top: -10px;
+        color: $color-2 !important;
+    }
+
+    .experience-active-header {
+        margin-top: -10px;
+    }
+}

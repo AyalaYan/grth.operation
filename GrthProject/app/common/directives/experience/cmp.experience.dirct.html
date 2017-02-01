@@ -1,0 +1,69 @@
+﻿<div class="employee-experience">
+    <div class="user-header employee-experience-first-header row">
+        <div class="col-md-9">
+            &nbsp;&nbsp;<i class="glyphicon glyphicon glyphicon-menu-right cmp-exp-glyphicon pull-left collpased-icon" ng-show="!collapsed" ng-click="collapsed=!collapsed;" title="Open"></i>
+            &nbsp;&nbsp;<i class="glyphicon glyphicon glyphicon-menu-down cmp-exp-glyphicon pull-left collpased-icon" ng-show="collapsed" ng-click="collapsed=!collapsed;" title="Close"></i>
+            <h4 class="experience-company-header">{{experience.CompanyName}}</h4>
+            <h4 class="experience-company-header" ng-show="!experience.CompanyName">Set Experience...</h4>
+
+        </div>
+        <div class="col-md-2 experience-active-header" ng-show="collapsed">
+            <div>
+                <label class="radio inline">
+                    <input type="radio" name="sex" ng-value="true"
+                           ng-model="experience.IsActive">
+                    <span> Active </span>
+                </label>
+                <label class="radio inline">
+                    <input type="radio" name="sex" ng-model="experience.IsActive"
+                           ng-value="false">
+                    <span> Inactive </span>
+                </label>
+            </div>
+        </div>
+        <div class="col-md-1" ng-show="collapsed">
+            <div class="pull-right">
+                <i class="glyphicon glyphicon-floppy-disk cmp-exp-glyphicon"
+                   ng-show="collapsed" ng-click="saveExperience();" title="Save"></i>&nbsp;&nbsp;
+                <i class="glyphicon glyphicon-share-alt cmp-exp-glyphicon"
+                   ng-show="collapsed" ng-click="cancelSaveExperience();"
+                   title="Cancel"></i>&nbsp;&nbsp;
+            </div>
+        </div>
+    </div>
+    <div class="user-header employee-experience-header row" ng-show="collapsed">
+        <div class="col-md-1 div-metadata-wrapper">
+            <span class="required-sign">*&nbsp;</span>Company:
+        </div>
+        <div class="col-md-2">
+            <select class="form-control" ng-model="experience.CompanyID" 
+                   ng-options="company.Value as company.DisplayText for company in companies">
+                <option value="" disabled="" selected="">Select Company</option>
+               
+            </select>
+
+        </div>
+        <div class="col-md-1 div-metadata-wrapper">
+            <span class="required-signcompany.Value as company.DisplayText for company">*&nbsp;</span>From Date:
+        </div>
+        <div class="col-md-2">
+            <input type="date" class="form-control display-inline" ng-model="experience.FromDate" required placeholder="Choose from date..." />
+        </div>
+        <div class="col-md-1 div-metadata-wrapper">
+            To Date:
+        </div>
+        <div class="col-md-2">
+            <input type="date" class="form-control" ng-model="experience.ToDate" placeholder="Choose to date..." />
+        </div>
+
+        <div class="col-md-1 div-metadata-wrapper padding-0">
+            <span class="required-sign">*&nbsp;</span>Technologies:
+        </div>
+        <div class="col-md-2 ">
+            <multiple-autocomplete ng-model="experience.Technologies"
+                                   object-property="name"
+                                   suggestions-arr="technologies">
+            </multiple-autocomplete>
+        </div>
+    
+</div>

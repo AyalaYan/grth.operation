@@ -1,0 +1,22 @@
+﻿[
+  {
+    "outputFile": "app/setUser/set.style.css",
+    "inputFile": "app/setUser/set.style.scss"
+  },
+  {
+    "outputFile": "app/pages/login/login.style.css",
+    "inputFile": "app/pages/login/login.style.scss"
+  },
+  {
+    "outputFile": "app/cmp.style.css",
+    "inputFile": "app/cmp.style.scss"
+  },
+  {
+    "outputFile": "app/pages/employees/employees.style.css",
+    "inputFile": "app/pages/employees/employees.style.scss"
+  },
+  {
+    "outputFile": "app/pages/employees/emplyees.style.css",
+    "inputFile": "app/pages/employees/emplyees.style.scss"
+  }
+]

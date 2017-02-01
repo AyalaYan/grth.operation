@@ -1,0 +1,54 @@
+﻿<div class="set-section">
+    <form class="panel panel-default">
+        <div class="panel-heading">
+            <span ng-show="!cmpSetVm.AddNewemployee">Add</span>
+            <span ng-show="cmpSetVm.AddNewemployee">Set</span>
+            employee <span class="font-bold">{{cmpSetVm.employeeObj.name}}</span>-
+        </div>
+        <div class="panel-body panel-operation">
+            <div class="employee-header row">
+                Name:<br />
+                <span class="required-sign">*&nbsp;</span><input type="text" class="form-control display-inline" ng-model="cmpSetVm.employeeObj.name" required />
+                <!--<img class="img-load-avatar" ng-model="{{cmpSetVm.employeeObj.avatar}}" ng-src="{{cmpSetVm.employeeObj.avatar}}" ng-click="cmpSetVm.loadAvatarImage();"/>-->
+            </div>
+            <div class="employee-header row">
+                Last Name:<br />
+                <span class="required-sign">*&nbsp;</span><input type="text" class="form-control display-inline" ng-model="cmpSetVm.employeeObj.lastName" required />
+            </div>
+            <div class="employee-header row">
+                Nick Name:<br />
+                <input type="text" class="form-control" ng-model="cmpSetVm.employeeObj.nickname" />
+            </div>
+            <div class="employee-header row">
+                Job Title:<br />
+                <span class="required-sign">*&nbsp;</span><input type="text" class="form-control display-inline" ng-model="cmpSetVm.employeeObj.jobTitle" required />
+            </div>
+            <div class="employee-header row">
+                Company:<br />
+                <span class="required-sign">*&nbsp;</span><input type="text" class="form-control display-inline" ng-model="cmpSetVm.employeeObj.company" required />
+            </div>
+            <div class="employee-header row">
+                Address:<br />
+                <span class="required-sign">*&nbsp;</span><input type="text" class="form-control display-inline" ng-model="cmpSetVm.employeeObj.address" required />
+            </div>
+            <div class="employee-header row">
+                Email:<br />
+                <span class="required-sign">*&nbsp;</span><input type="email" class="form-control display-inline" ng-model="cmpSetVm.employeeObj.email" title="me@example.com" required />
+            </div>
+            <div class="employee-header row">
+                Phone:<br />
+                <span class="required-sign">*&nbsp;</span><input type="text" class="form-control display-inline" 
+                                                                   ng-model="cmpSetVm.employeeObj.phone" />
+            </div>
+            <div class="employee-header row">
+                Birthday:<br />
+                <input type="date" class="form-control" ng-model="cmpSetVm.employeeObj.birthday" />
+            </div>
+            <div class="employee-header row">
+                Notes:<br />
+                <input type="text" class="form-control" ng-model="cmpSetVm.employeeObj.notes" />
+            </div>
+        </div>
+        <div class="panel-footer"><input value="Save" type="submit" class="btn" ng-click="cmpSetVm.saveemployeeData();" /> </div>
+    </form>
+</div>
